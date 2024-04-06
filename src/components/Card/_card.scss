@@ -1,0 +1,42 @@
+@use "/src/css/abstracts/variables" as var;
+@use "/src/css/abstracts/mixins" as mix;
+@use "sass:math";
+
+.cardWrapper {
+  flex-basis: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .card {
+    flex-basis: 31%;
+    border: 1px solid var.$text-color-secondary;
+    margin-bottom: var.$gutter-base;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .cardTextContainer {
+      background-color: var.$background-color-tertiary;
+      padding: var.$gutter-base / 2;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .cardTextContainer:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  .card:hover {
+    border: 1px solid var.$text-color-tertiary;
+  }
+
+  .card img {
+    padding: var.$gutter-base / 2;
+  }
+  .card img:hover {
+    transition: transform 0.2s;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,25 @@
+@use "/src/css/abstracts/variables" as var;
+@use "/src/css/abstracts/mixins" as mix;
+@use "sass:math";
+
+.filter {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+
+  .badge {
+    color: var.$text-color-primary;
+    background-color: var.$background-color-primary;
+    display: block;
+    margin-bottom: var.$gutter-base / 4;
+    padding: 0 var.$gutter-base / 3;
+    border-radius: var.$gutter-base;
+  }
+}
+
+.active {
+  color: var.$background-color-tertiary;
+  .badge {
+    background-color: var.$background-color-tertiary;
+  }
+}

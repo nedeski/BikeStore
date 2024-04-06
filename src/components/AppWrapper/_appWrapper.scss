@@ -1,0 +1,26 @@
+@use "/src/css/abstracts/variables" as var;
+@use "/src/css/abstracts/mixins" as mix;
+@use "sass:math";
+
+.appWrapper {
+  @extend %wrap;
+  .mainTitle {
+    padding: 0 var.$gutter-base / 2;
+    h1 {
+      font-size: var.$heading-size-big;
+    }
+  }
+  background-color: var.$background-color-base;
+  .mainWrapper {
+    padding: 0 var.$gutter-base / 2;
+    display: flex;
+    justify-content: space-between;
+    .filterWrapper {
+      flex-basis: 25%;
+      margin-right: var.$gutter-base;
+    }
+    .cardWrapper {
+      flex-basis: 75%;
+    }
+  }
+}
